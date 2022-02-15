@@ -1,0 +1,92 @@
+.wrapper {
+    flex: 1;
+    height: 100vh;
+    width: 100%;
+    flex-wrap: wrap;   /* NEW */
+}
+
+.header {
+    background-color: #7E64FF;
+    height: 103px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 20px;
+}
+
+.avatar {
+    height: 66px;
+    width: 66px;
+    border-radius: 100px;
+    background-color: white;
+    margin: 10px;
+}
+
+.headerRight {
+    display: flex; 
+    align-items: center;
+    justify-content: end;
+    flex: 0.5;
+    color: white;
+}
+
+.headerLeft {
+    display: flex;
+}
+
+.textTo {
+    color: #231B35;
+    font-size: 48px;
+}
+
+.textDo {
+    color: #E0E0E0;
+    font-size: 48px;
+}
+
+.headerRight p {
+    font-size: 24px;
+}
+
+.body {
+    background-color: #231B35;
+    height: 623px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.input {
+    height: 59px;
+    width: 685px;
+    background-color: #CCC2FE;
+    border-radius: 5px;
+    padding: 0 10px;
+}
+
+.form p {
+    color: white;
+    margin-bottom: 37px;
+    font-size: 36px;
+}
+
+.button {
+    border: 20px solid #7E64FF;
+    background-color: #7E64FF;
+    width: 295px;
+    border-radius: 5px;
+    align-self: flex-end;
+    margin-top: 48px;
+    color: white;
+    font-size: 20px;
+}
+
+.buttonWrapper{
+    display: flex;
+    justify-content: end;
+}
+
+.footer {
+    height: 391px;
+    background-color: #7E64FF;
+}
