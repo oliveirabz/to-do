@@ -1,8 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import './style.css'
 import foto from '../../assets/foto-2.png'
 
 export const FirstScreen = () => {
+    const [user, setUser] = useState('');
+
+    function handleChange(e: any) {
+        setUser(e.target.value);
+    }
+
     return (
         <div className="wrapper">
 
@@ -15,14 +21,14 @@ export const FirstScreen = () => {
                 <div className="headerRight">
                     <div className="avatar">
                     </div>
-                    <p>Digite seu nome</p>
+                    <p>{user ? user : 'Digite seu nome'}</p>
                 </div>
             </div>
         
             <div className="body">
                 <div className="form">
                         <p>Digite seu nome</p>
-                        <input type="text" className="input" placeholder="Digite aqui"></input>
+                        <input type="text" className="input" placeholder="Digite aqui" onChange={handleChange}></input>
 
                     <div className="buttonWrapper">
                         <button type="submit" className="button">
@@ -35,7 +41,7 @@ export const FirstScreen = () => {
             <div className="footer">
                 <p>Desenvolvido por Bruna Oliveira</p>
 
-                <img src={foto} />
+                <img src={foto} alt='foto-2'/>
             </div>
 
         </div>   

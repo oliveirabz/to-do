@@ -89,4 +89,19 @@
 .footer {
     height: 391px;
     background-color: #7E64FF;
+    display: flex;
+    justify-content: center;
+}
+
+.footer p {
+    margin-top: 60px;
+    font-size: 24px;
+    color: white;
+}
+
+.footer img {
+    position: absolute;
+    left: 800px;
+    bottom: -354px;  
+
 }
