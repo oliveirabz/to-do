@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import './style.css'
 import foto from '../../assets/foto-2.png'
+import { Header } from "../../components/Header";
 
 export const FirstScreen = () => {
     const [user, setUser] = useState('');
@@ -11,20 +12,7 @@ export const FirstScreen = () => {
 
     return (
         <div className="wrapper">
-
-            <div className="header">
-                <div className="headerLeft">
-                    <h1 className="textTo">To</h1>
-                    <h1 className="textDo">Do</h1>
-                </div>
-
-                <div className="headerRight">
-                    <div className="avatar">
-                    </div>
-                    <p>{user ? user : 'Digite seu nome'}</p>
-                </div>
-            </div>
-        
+            <Header user={user} />        
             <div className="body">
                 <div className="form">
                         <p>Digite seu nome</p>

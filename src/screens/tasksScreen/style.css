@@ -1,0 +1,42 @@
+.body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #231B35;
+}
+
+.task-text {
+    color: white;
+    font-size: 36px;
+    margin-bottom: 35px;
+}
+
+.input {
+    width: 366px;
+    height: 32px;
+    border-radius: 5px;
+    padding: 0 10px;
+    margin-bottom: 25px;
+    display: block;
+    background-color: #CCC2FE;
+}
+
+.submit {
+    border: 20px solid #7E64FF;
+    background-color: #7E64FF;
+    border-radius: 5px;
+    width: 140px;
+    height: 38px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    float: right;
+}
+
+.body-right p {
+    font-size: 36px;
+    color: white;
+}

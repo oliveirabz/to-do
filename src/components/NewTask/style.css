@@ -1,0 +1,19 @@
+.wrapper-task {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 25px;
+}
+
+.button-right {
+    display: flex;
+}
+
+.left {
+    font-size: 16px;
+    color: white;
+}
+
+.button-right {
+    font-size: 12px;
+    color: #828282;
+}

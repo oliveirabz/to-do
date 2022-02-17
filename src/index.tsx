@@ -1,11 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import { FirstScreen } from './screens/firstScreen';
+import { SecondScreen } from './screens/tasksScreen';
 
 ReactDOM.render(
   <React.StrictMode>
-    <FirstScreen />
+    <SecondScreen />
   </React.StrictMode>,
   document.getElementById('root')
 );
