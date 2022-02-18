@@ -17,7 +17,7 @@ export const NewTask = ({ title, info }: Props) => {
 
             <div className="button-right">
                 <p>{info}</p>
-                <TiChevronRight />
+                <TiChevronRight className="icon"/>
             </div>
         </div>
     )

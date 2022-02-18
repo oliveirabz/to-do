@@ -1,0 +1,16 @@
+.tasks {
+    border: 1px solid #7E64FF;
+    background-color: #7E64FF;
+    border-radius: 10px;
+    width: 366px;
+    height: 104px;
+    margin-bottom: 20px;
+}
+
+.tasks li {
+    display: flex;
+    justify-content: flex-start;
+    padding: 20px 10px;
+    color: white;
+    font-size: 14px;
+}

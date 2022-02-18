@@ -39,4 +39,32 @@
 .body-right p {
     font-size: 36px;
     color: white;
+    margin-bottom: 50px;
+}
+
+.body-right {
+    margin-left: 100px;
+}
+
+.footer {
+    height: 350px;
+    background-color: #7E64FF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer p {
+    font-size: 24px;
+    color: white;
+    justify-content: center;
+    margin-bottom: 245px;
+}
+
+.footer img {
+    margin-bottom: 210px;
+}
+
+.vr {
+    margin-top: 55px;
 }
