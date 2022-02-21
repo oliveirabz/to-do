@@ -47,7 +47,7 @@
 }
 
 .footer {
-    height: 350px;
+    height: 460px;
     background-color: #7E64FF;
     display: flex;
     justify-content: center;
@@ -58,13 +58,25 @@
     font-size: 24px;
     color: white;
     justify-content: center;
-    margin-bottom: 245px;
+    margin-bottom: 275px;
+    white-space: nowrap;
 }
 
 .footer img {
-    margin-bottom: 210px;
+    margin-bottom: 100px;
 }
 
 .vr {
-    margin-top: 55px;
+    margin-top: 60px;
+}
+
+.section {
+    height: 300px;
+    overflow-y: scroll;
+}
+
+.span {
+    color: red;
+    position: relative;
+    bottom: 20px;
 }

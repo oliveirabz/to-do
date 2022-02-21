@@ -1,16 +1,31 @@
-.tasks {
+.box {
     border: 1px solid #7E64FF;
     background-color: #7E64FF;
     border-radius: 10px;
     width: 366px;
-    height: 104px;
     margin-bottom: 20px;
 }
 
-.tasks li {
+.content {
     display: flex;
-    justify-content: flex-start;
-    padding: 20px 10px;
-    color: white;
-    font-size: 14px;
+    justify-content: space-between;
+    padding: 0 8px;
+    height: 50px;
+}
+
+h1 {
+    font-size: 30px;
+    color: white; 
+}
+.content p {
+    font-size: 20px;
+    color: black;
+}
+
+.notes {
+    padding: 0 8px;
+}
+.notes p {
+    font-size: 15px;
+    
 }
