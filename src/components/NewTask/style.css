@@ -16,6 +16,7 @@
 .button-right {
     font-size: 12px;
     color: #828282;
+    cursor: pointer;
 }
 
 .icon {

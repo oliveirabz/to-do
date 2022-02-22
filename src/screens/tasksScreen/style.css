@@ -52,6 +52,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow-y: hidden;
+    overflow-x: hidden;
 }
 
 .footer p {
@@ -73,10 +75,26 @@
 .section {
     height: 300px;
     overflow-y: scroll;
+    scrollbar-width: thin;          /* "auto" or "thin" */
+    scrollbar-color: #7E64FF black;   /* scroll thumb and track */
+    padding: 0 50px;
 }
 
 .span {
     color: red;
     position: relative;
     bottom: 20px;
+}
+
+.calendar {
+    width: 100%;
+    background-color: red;
+}
+
+.div-calendar{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    position: absolute;
+    z-index: 99;
 }

@@ -4,12 +4,13 @@ import './style.css';
 
 interface Props {
     title: string, 
-    info: string
+    info: string,
+    press: () => void,
 }
 
-export const NewTask = ({ title, info }: Props) => {
+export const NewTask = ({ title, info, press }: Props) => {
     return (
-        <div className="wrapper-task">
+        <div className="wrapper-task" onClick={() => press()}>
             
             <div className="left">
                 <label>{title}</label>

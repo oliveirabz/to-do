@@ -24,8 +24,21 @@ h1 {
 
 .notes {
     padding: 0 8px;
+    word-wrap: break-word;
 }
 .notes p {
     font-size: 15px;
     
+}
+
+.date {
+    display: flex;
+    justify-content: center;
+    height: 40px;
+}
+
+.date p {
+    font-size: 15px;
+    align-items: flex-end;
+    color: black;
 }

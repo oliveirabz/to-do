@@ -4,10 +4,12 @@ import './style.css';
 interface Props {
     title: string,
     place: string,
-    notes: string
+    notes: string,
+    date: string,
+    dateFinish: string
 }
 
-export const Box = ({ title, place, notes }: Props) => {
+export const Box = ({ title, place, notes, date, dateFinish }: Props) => {
     return (
         <div className="all">
             
@@ -20,6 +22,11 @@ export const Box = ({ title, place, notes }: Props) => {
                 <div className="notes">
                     <p>{notes}</p>
                 </div>
+
+                <div className="date">
+                    <p>{date} - {dateFinish}</p>
+                </div>
+
             </div>
         </div>
     )
