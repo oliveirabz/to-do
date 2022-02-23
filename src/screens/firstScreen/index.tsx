@@ -1,35 +1,46 @@
 import React, { useState } from "react";
 import './style.css'
-import foto from '../../assets/foto-2.png'
 import { Header } from "../../components/Header";
+import { useHistory } from "react-router-dom";
+import { useForm, SubmitHandler } from "react-hook-form";
+
+interface IUser {
+    user: string;
+}
 
 export const FirstScreen = () => {
     const [user, setUser] = useState('');
+    const { register, handleSubmit, reset, formState: { errors } } = useForm<IUser>();
 
-    function handleChange(e: any) {
-        setUser(e.target.value);
-    }
+    const history = useHistory();
+
+    const onSubmit: SubmitHandler<IUser> = (data) => {
+
+        history.push('/tasks');
+        reset()
+     };
+
 
     return (
         <div className="wrapper">
-            <Header user={user} />        
+            <Header user={user} />
+
             <div className="body">
-                <div className="form">
+                <form className="form" onSubmit={handleSubmit(onSubmit)}>
                         <p>Digite seu nome</p>
-                        <input type="text" className="input" placeholder="Digite aqui" onChange={handleChange}></input>
+                        <input type="text" id="user" className="input" placeholder="Digite aqui"  {...register("user", { required: true })}></input>
+                        {errors.user && errors.user.type === "required" && <span className="span">This is required</span>}
 
                     <div className="buttonWrapper">
                         <button type="submit" className="button">
-                            Próximo
+                            Próximo                               
                         </button>
                     </div>
-                </div>
+                </form>
             </div>
 
             <div className="footer">
                 <p>Desenvolvido por Bruna Oliveira</p>
-
-                <img src={foto} alt='foto-2'/>
             </div>
 
         </div>   

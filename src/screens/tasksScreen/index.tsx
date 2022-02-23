@@ -4,8 +4,6 @@ import { Header } from "../../components/Header";
 import { NewTask } from "../../components/NewTask";
 import './style.css';
 import { Box } from "../../components/BoxTask";
-import pic from '../../assets/foto-1.png';
-import picture from '../../assets/foto-3.png';
 import Calendar from 'react-calendar';
 import moment from "moment";
 
@@ -102,9 +100,7 @@ export const SecondScreen = () => {
             </div>
 
             <div className="footer">
-                <img src={pic} alt='foto-1' className="vr" />
                 <p>Desenvolvido por Bruna Oliveira</p>                    
-                <img src={picture} alt='foto-3' className="sit" />
             </div>
         </div>
     )
