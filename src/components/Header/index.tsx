@@ -1,13 +1,11 @@
 import React from "react";
 import './style.css';
 
-interface Props {
-    user?: string;
-}
 
+export const Header = () => {
 
+    const user = localStorage.getItem('@todo:user');
 
-export const Header = ({ user }: Props) => {
     return (
         <div className="header">
             <div className="headerLeft">
@@ -18,7 +16,7 @@ export const Header = ({ user }: Props) => {
             <div className="headerRight">
                 <div className="avatar">
                 </div>
-                <p>{user ? user : 'Digite seu nome'}</p>
+                <p id="p">{user}</p>
             </div>
         </div>
     )

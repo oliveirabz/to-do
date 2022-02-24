@@ -12,6 +12,7 @@ ReactDOM.render(
     <Switch>
       <Route path='/register' component={FirstScreen} />
       <Route path='/tasks' component={SecondScreen} />
+      <Route path='/' component={FirstScreen} />
     </Switch>
   </Router>,
   document.getElementById('root')

@@ -19,7 +19,7 @@ interface Itasks {
 export const SecondScreen = () => {
     const [tasks, setTasks] = useState<Itasks[]>([]);
     const { register, handleSubmit, reset, formState: { errors } } = useForm<Itasks>();
-    const [date, setDate] = useState(new Date());
+    const [dateStart, setDateStart] = useState(new Date());
     const [dateFinish, setdateFinish] = useState(new Date());
     const [isOpenCalendarStart, setisOpenCalendarStart] = useState(false);
     const [isOpenCalendarFinish, setisOpenCalendarFinish] = useState(false);
@@ -30,7 +30,7 @@ export const SecondScreen = () => {
            {
                 id: data.id,
                 title: data.title, 
-                startFrom: moment(date).locale('pt-br').format('DD MMMM YYYY'), 
+                startFrom: moment(dateStart).locale('pt-br').format('DD MMMM YYYY'), 
                 finish: moment(dateFinish).locale('pt-br').format('DD MMMM YYYY'),
                 place: data.place, 
                 notes: data.notes
@@ -40,15 +40,28 @@ export const SecondScreen = () => {
     };
 
     const handleClick = (e: any) => {
-        setDate(e)
-        setisOpenCalendarStart(!isOpenCalendarStart)
+        setDateStart(e)
+
+        if (e > dateFinish) {
+            alert('Error: Invalid Date')
+        } else {
+            setisOpenCalendarStart(!isOpenCalendarStart)
+        }
     }
 
     const handleClickFinish = (e: any) => {
         setdateFinish(e);
-        setisOpenCalendarFinish(!isOpenCalendarFinish)
+        console.log(dateFinish, dateStart);
+
+        if (e < dateStart) {
+            alert('Error: Invalid Date');
+        } else {
+            setisOpenCalendarFinish(!isOpenCalendarFinish)
+        }
+
     }
 
+    
     return (
         <div className="wrapper">
             <Header />
@@ -61,11 +74,11 @@ export const SecondScreen = () => {
                         <input id="title" type='text' placeholder='Title' className="input" {...register("title", { required: true })}/>
                         {errors.title && errors.title.type === "required" && <span className="span">This is required</span>}
 
-                        <NewTask title='Start from' info={moment(date).locale('pt-br').format('DD MMMM YYYY')} press={() => setisOpenCalendarStart(!isOpenCalendarStart) } />
+                        <NewTask title='Start from' info={moment(dateStart).locale('pt-br').format('DD MMMM YYYY')} press={() => setisOpenCalendarStart(!isOpenCalendarStart) } />
                         { isOpenCalendarStart && 
 
                         <div className="div-calendar">
-                            <Calendar className={'calendar'} onChange={handleClick} value={date} />
+                            <Calendar className={'calendar'} onChange={handleClick} value={dateStart} />
                         </div>
                         }
 

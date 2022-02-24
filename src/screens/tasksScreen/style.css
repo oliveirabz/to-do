@@ -96,5 +96,6 @@
     align-items: center;
     display: flex;
     position: absolute;
+    right: 130px;   
     z-index: 99;
 }

@@ -1,4 +1,3 @@
-import React, { useState } from "react";
 import './style.css'
 import { Header } from "../../components/Header";
 import { useHistory } from "react-router-dom";
@@ -9,21 +8,20 @@ interface IUser {
 }
 
 export const FirstScreen = () => {
-    const [user, setUser] = useState('');
     const { register, handleSubmit, reset, formState: { errors } } = useForm<IUser>();
 
     const history = useHistory();
 
     const onSubmit: SubmitHandler<IUser> = (data) => {
-
         history.push('/tasks');
+        localStorage.setItem("@todo:user", data.user);
         reset()
      };
 
 
     return (
         <div className="wrapper">
-            <Header user={user} />
+            <Header />
 
             <div className="body">
                 <form className="form" onSubmit={handleSubmit(onSubmit)}>
