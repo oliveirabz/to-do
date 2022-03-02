@@ -65,7 +65,10 @@
 }
 
 .footer img {
-    margin-bottom: 100px;
+    margin-bottom: 145px;
+    margin-left: 20px;
+    height: 50px;
+    width: 50px;
 }
 
 .vr {

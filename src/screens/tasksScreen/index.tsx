@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useForm, SubmitHandler } from "react-hook-form";
 import { Header } from "../../components/Header";
 import { NewTask } from "../../components/NewTask";
@@ -6,6 +6,7 @@ import './style.css';
 import { Box } from "../../components/BoxTask";
 import Calendar from 'react-calendar';
 import moment from "moment";
+import { GetInfo } from "../../services/getWeather";
 
 interface Itasks {
     id: string, 
@@ -16,6 +17,17 @@ interface Itasks {
     notes: string
 }
 
+interface Iweather {
+    weather: [{
+        description: string,
+        icon: string,
+        id: number
+    }],
+    main: {
+        temp: number
+    }
+}
+
 export const SecondScreen = () => {
     const [tasks, setTasks] = useState<Itasks[]>([]);
     const { register, handleSubmit, reset, formState: { errors } } = useForm<Itasks>();
@@ -23,6 +35,10 @@ export const SecondScreen = () => {
     const [dateFinish, setdateFinish] = useState(new Date());
     const [isOpenCalendarStart, setisOpenCalendarStart] = useState(false);
     const [isOpenCalendarFinish, setisOpenCalendarFinish] = useState(false);
+    const [latitude, setLatitude] = useState(0);
+    const [longitude, setLongitude] = useState(0);
+    const [weather, setWeather] = useState<Iweather>();
+    const [convert, setConvert] = useState(0);
 
     const onSubmit: SubmitHandler<Itasks> = (data) => {
        setTasks((old) => [
@@ -58,10 +74,32 @@ export const SecondScreen = () => {
         } else {
             setisOpenCalendarFinish(!isOpenCalendarFinish)
         }
+    } 
 
+    const getWeather = async() => {
+       const response: Iweather = await GetInfo({ latitude, longitude });
+        console.log(response)
+        setWeather(response)
+        setConvert(response.main.temp - 273)
     }
 
+    const getLocation = async() => {
+        await navigator.geolocation.getCurrentPosition(position => {
+            setLatitude(position.coords.latitude);
+            setLongitude(position.coords.longitude);
+        });
+    }
+
+    useEffect(() => {
+        getLocation()
+    }, [])
+
+    useEffect(() => {
+        getWeather();
+    }, [latitude, longitude])
     
+    const icon = `http://openweathermap.org/img/w/${weather?.weather[0].icon}.png`;
+
     return (
         <div className="wrapper">
             <Header />
@@ -113,7 +151,9 @@ export const SecondScreen = () => {
             </div>
 
             <div className="footer">
-                <p>Desenvolvido por Bruna Oliveira</p>                    
+                <p>Desenvolvido por Bruna Oliveira</p>
+                <h1>{convert.toFixed(2)}°C</h1>
+                <img src={icon} alt='icon' className="icon" />                 
             </div>
         </div>
     )
