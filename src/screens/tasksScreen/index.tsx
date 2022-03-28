@@ -98,7 +98,7 @@ export const SecondScreen = () => {
         getWeather();
     }, [latitude, longitude])
     
-    const icon = `http://openweathermap.org/img/w/${weather?.weather[0].icon}.png`;
+    // const icon = `http://openweathermap.org/img/w/${weather?.weather[0].icon}.png`;
 
     return (
         <div className="wrapper">
@@ -153,7 +153,7 @@ export const SecondScreen = () => {
             <div className="footer">
                 <p>Desenvolvido por Bruna Oliveira</p>
                 <h1>{convert.toFixed(2)}°C</h1>
-                <img src={icon} alt='icon' className="icon" />                 
+                {/*<img src={icon} alt='icon' className="icon" />*/}
             </div>
         </div>
     )

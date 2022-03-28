@@ -6,7 +6,7 @@ interface Props {
 }
 
 export const GetInfo = async ({ latitude, longitude }: Props) => {
-    const response = await axios.get(`https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=f6608a8fbdbc9c94cf4e6cbde65a9301`);
+    const response = await axios.get(`https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${'put your api key here'}`);
 
     return response.data;
 }
