@@ -28,7 +28,7 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 ![toDo-one](https://user-images.githubusercontent.com/95765270/160250554-42f52c1e-45fe-4d5d-aae4-05561302254e.png)
 
 
-### Allow the browser to access your location: (optional)
+### Allow the browser to access your location (optional):
 
 ![toDo-two](https://user-images.githubusercontent.com/95765270/160250560-e5b42a24-b153-44ac-b99c-b7b043910179.png)
 
