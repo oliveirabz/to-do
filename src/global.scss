@@ -1,0 +1,19 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  font-family: "Poppins";
+}
+
+button {
+  cursor: pointer;
+}
+
+:root {
+  --primary: #e4b7e5;
+  --secondary: #1c1d21;
+
+  --white: #fff;
+  --shape: #ffffff98;
+}

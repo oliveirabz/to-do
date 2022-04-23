@@ -1,0 +1,53 @@
+.box {
+  background-color: var(--secondary);
+
+  border: 1px solid var(--secondary);
+  border-radius: 5px;
+
+  width: 360px;
+  margin-bottom: 20px;
+
+  .content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    height: 50px;
+
+    padding: 0 8px;
+
+    h1 {
+      color: var(--white);
+      font-size: 30px;
+    }
+
+    p {
+      color: var(--white);
+      font-size: 12px;
+    }
+  }
+
+  .notes {
+    padding: 0 8px;
+    word-wrap: break-word;
+
+    p {
+      color: var(--white);
+      font-size: 15px;
+    }
+  }
+
+  .place {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+
+    height: 40px;
+
+    p {
+      font-size: 20px;
+      align-items: flex-end;
+      color: var(--white);
+    }
+  }
+}

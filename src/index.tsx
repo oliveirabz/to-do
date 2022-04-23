@@ -1,10 +1,21 @@
+// React
 import ReactDOM from 'react-dom';
-import './index.css';
-import { SecondScreen } from './screens/tasksScreen';
+
+// React Calendar
 import 'react-calendar/dist/Calendar.css';
+
+// moment
 import 'moment/locale/pt-br';
+
+// Screens
 import { FirstScreen } from './screens/firstScreen';
+import { SecondScreen } from './screens/tasksScreen';
+
+// React Router
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+
+// Styles (global)
+import './global.scss';
 
 ReactDOM.render(
   <Router>

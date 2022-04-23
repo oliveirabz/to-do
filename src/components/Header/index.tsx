@@ -1,5 +1,5 @@
-import React from "react";
-import './style.css';
+// Styles
+import styles from './styles.module.scss';
 
 
 export const Header = () => {
@@ -7,16 +7,16 @@ export const Header = () => {
     const user = localStorage.getItem('@todo:user');
 
     return (
-        <div className="header">
-            <div className="headerLeft">
-                <h1 className="textTo">To</h1>
-                <h1 className="textDo">Do</h1>
+        <div className={styles.container}>
+            <div className={styles.left}>
+                <h1>To</h1>
+                <h1>Do</h1>
             </div>
 
-            <div className="headerRight">
-                <div className="avatar">
+            <div className={styles.right}>
+                <div>
                 </div>
-                <p id="p">{user}</p>
+                <p>{user}</p>
             </div>
         </div>
     )
