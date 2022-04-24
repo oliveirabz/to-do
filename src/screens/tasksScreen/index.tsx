@@ -185,7 +185,7 @@ export const SecondScreen = () => {
             )}
 
             <button type="submit" className={styles.submit}>
-              Cadastrar
+              Register
             </button>
           </form>
         </div>

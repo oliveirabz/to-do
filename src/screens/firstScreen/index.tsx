@@ -36,12 +36,12 @@ export const FirstScreen = () => {
 
       <div className={styles.body}>
         <form onSubmit={handleSubmit(onSubmit)}>
-          <p>Digite seu nome</p>
+          <p>What's your name?</p>
           <input
             type="text"
             id="user"
             className="input"
-            placeholder="Digite aqui"
+            placeholder="type here..."
             {...register("user", { required: true })}
           ></input>
           {errors.user && errors.user.type === "required" && (
@@ -49,7 +49,7 @@ export const FirstScreen = () => {
           )}
 
           <div>
-            <button type="submit">Próximo</button>
+            <button type="submit">Next</button>
           </div>
         </form>
       </div>
