@@ -22,27 +22,33 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 
 ## Workshop
+see a bit of my first work.. ;)
 
 ### Write your name to login:
 
-![toDo-one](https://user-images.githubusercontent.com/95765270/160250554-42f52c1e-45fe-4d5d-aae4-05561302254e.png)
+![ToDo-1](https://user-images.githubusercontent.com/95765270/164952457-928f891e-42ac-4424-af02-3dab316a648d.png)
 
 
-### Allow the browser to access your location (optional):
-
-![toDo-two](https://user-images.githubusercontent.com/95765270/160250560-e5b42a24-b153-44ac-b99c-b7b043910179.png)
-
-#### Adv: If you want to use this functionality, you need to create an Open Weather account and generate an API key to replace it in the 'getWeather.ts' file. In services > getWeather.ts 
+![ToDo-2](https://user-images.githubusercontent.com/95765270/164952542-f985ac3d-a0eb-4b34-b05a-4fc30e2edab5.png)
 
 
-### Look the temperature in Celsius of your city! (optional)
 
-![toDo-three](https://user-images.githubusercontent.com/95765270/160250565-356a7259-f952-426b-9813-ba3735bc36e6.png)
+### Register a task!
+
+![ToDo-3](https://user-images.githubusercontent.com/95765270/164952555-21705bd5-0cd2-484d-81d1-d00ab8c025d8.png)
 
 
-## After registering a task, see them on the side: 
+![ToDo-4](https://user-images.githubusercontent.com/95765270/164952562-5c040182-4898-4037-b4e0-5fe34d36c73d.png)
 
-![toDo-four](https://user-images.githubusercontent.com/95765270/160250571-fe8f5746-c062-4422-9ef5-886b9c91fb11.png)
+
+
+## After registering, see them on the side: 
+
+![ToDo-5](https://user-images.githubusercontent.com/95765270/164952573-aad430b2-2a07-4411-b1f6-ffd14d40b9c5.png)
+
+
+![ToDo-6](https://user-images.githubusercontent.com/95765270/164952575-01d98a8a-08b1-494b-9003-314717d5dd52.png)
+
 
 
 ## Learn More
@@ -50,3 +56,5 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 To learn React, check out the [React documentation](https://reactjs.org/).
+
+Thank you for the attention!
